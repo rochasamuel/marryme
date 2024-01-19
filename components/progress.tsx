@@ -71,6 +71,7 @@ const Progress: FunctionComponent = () => {
         </div>
         {milestones.map((milestone) => (
           <div
+            key={milestone.id}
             className="absolute -left-[5px] h-6 w-6 rounded-full border bg-black"
             style={{ top: `${(milestone.amount / totalAmount) * 100}%` }}
           />
