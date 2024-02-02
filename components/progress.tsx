@@ -14,11 +14,12 @@ import { useAnimation, motion } from "framer-motion";
 import { PlusIcon } from "lucide-react";
 import { Button } from "./ui/button";
 import { Input } from "./ui/input";
+import { Card, CardContent } from "./ui/card";
 // interface Props {
 // }
 
 const milestones = [
-  { id: 1, title: "Milestone 1", description: "Description 1", amount: 2000 },
+  { id: 1, title: "Brasil", description: "Maior país da América do Sul, conhecido por sua diversidade geográfica, cultural e étnica. Possui vastas florestas tropicais, como a Amazônia, e é famoso pelo Carnaval e pelo futebol.", amount: 2000 },
   { id: 2, title: "Milestone 2", description: "Description 2", amount: 6000 },
   { id: 3, title: "Milestone 3", description: "Description 3", amount: 10000 },
   { id: 3, title: "Milestone 3", description: "Description 3", amount: 12000 },
@@ -37,38 +38,11 @@ const Progress: FunctionComponent = () => {
 
   return (
     <div className="w-full">
-      <div className="relative flex h-[1500px] w-4 rounded-md border">
+      <div className="relative flex h-[1500px] w-4 rounded-md border-2">
         <div
           className="max-h-[1500px] w-full bg-black rounded-md"
           style={{ height: `${(progress / totalAmount) * 100}%` }}
         />
-        <div className="fixed right-10 top-20">
-          <Dialog>
-            <DialogTrigger>
-              <Button>
-                <PlusIcon className="mr-2 h-4 w-4" /> Send Found
-              </Button>
-            </DialogTrigger>
-            <DialogContent>
-              <DialogHeader>
-                <DialogTitle>Digite a quantidade</DialogTitle>
-                <DialogDescription>
-                  <Input
-                    placeholder="0"
-                    onChange={(e) => setAmountToSend(Number(e.target.value))}
-                    className="mt-4"
-                    type="number"
-                  />
-                </DialogDescription>
-              </DialogHeader>
-              <DialogFooter>
-                <DialogClose>
-                  <Button onClick={() => handleSendFound()}>Enviar</Button>
-                </DialogClose>
-              </DialogFooter>
-            </DialogContent>
-          </Dialog>
-        </div>
         {milestones.map((milestone) => (
           <div
             key={milestone.id}
@@ -77,30 +51,29 @@ const Progress: FunctionComponent = () => {
           />
         ))}
         {milestones.map((milestone) => {
-          if (milestone.amount <= progress) {
             return (
               <motion.div
                 initial={{ width: 0 }}
                 whileInView={{ width: 200 }}
                 key={milestone.id}
-                className="absolute left-16 flex h-20 w-[400px] flex-col items-center justify-center overflow-hidden text-nowrap rounded-md border"
+                className="absolute left-10 min-w-[80vw]"
                 style={{ top: `${(milestone.amount / totalAmount) * 100}%` }}
-              >
-                <p>{milestone.title}</p>
-                <p>{milestone.description}</p>
+              > 
+                <Card className="w-full h-full">
+                  <CardContent className="flex flex-col gap-2 p-2">
+                    {/* <img className="aspect-square h-min" src="https://via.placeholder.com/120" alt="Milestone" /> */}
+                    <div className="w-full h-20 bg-slate-200 rounded-sm flex items-center justify-center">image</div>
+
+                    <div className="float-right">
+                      <p className="text-xl font-bold">{milestone.title}</p>
+                      <p className="text-sm">{milestone.description}</p>
+                    </div>
+                  </CardContent>
+                </Card>
               </motion.div>
             );
-          }
         })}
       </div>
-      <input
-        className="fixed right-10 top-10 w-96"
-        type="range"
-        min={0}
-        max={18000}
-        value={progress}
-        onChange={(e) => setProgress(Number(e.target.value))}
-      />
     </div>
   );
 };

@@ -29,12 +29,18 @@ dependencies:
   clsx:
     specifier: ^2.1.0
     version: 2.1.0
+  embla-carousel-autoplay:
+    specifier: 8.0.0-rc22
+    version: 8.0.0-rc22(embla-carousel@8.0.0-rc22)
+  embla-carousel-react:
+    specifier: 8.0.0-rc22
+    version: 8.0.0-rc22(react@18.2.0)
   framer-motion:
     specifier: ^10.18.0
     version: 10.18.0(react-dom@18.2.0)(react@18.2.0)
   lucide-react:
-    specifier: ^0.309.0
-    version: 0.309.0(react@18.2.0)
+    specifier: ^0.321.0
+    version: 0.321.0(react@18.2.0)
   next:
     specifier: 14.0.4
     version: 14.0.4(react-dom@18.2.0)(react@18.2.0)
@@ -1469,6 +1475,36 @@ packages:
     resolution: {integrity: sha512-osHqhtjojpCsACVnuD11xO5g9xaCyw7Qqn/C2KParkMv42i8jrJJgx3g7mkHfpxwhy9MnOJr8+pKOdZ7qzgizg==}
     dev: true
 
+  /embla-carousel-autoplay@8.0.0-rc22(embla-carousel@8.0.0-rc22):
+    resolution: {integrity: sha512-UFR9ocKapxuYwcAOv8mb6Rmy7TENpzzHTymKADzB1L5dAJJxjUtOci/OpE3KrZedQaniLMz3HIO9hHqgj1h/3w==}
+    peerDependencies:
+      embla-carousel: 8.0.0-rc22
+    dependencies:
+      embla-carousel: 8.0.0-rc22
+    dev: false
+
+  /embla-carousel-react@8.0.0-rc22(react@18.2.0):
+    resolution: {integrity: sha512-NwmISV0Cw9XVo76Vquz3hJaeZe7qoCRtrzStxlEY7qfZD8WR/f4JlQAso35URTs1BeYVhcuClflelioo+Zmidg==}
+    peerDependencies:
+      react: ^16.8.0 || ^17.0.1 || ^18.0.0
+    dependencies:
+      embla-carousel: 8.0.0-rc22
+      embla-carousel-reactive-utils: 8.0.0-rc22(embla-carousel@8.0.0-rc22)
+      react: 18.2.0
+    dev: false
+
+  /embla-carousel-reactive-utils@8.0.0-rc22(embla-carousel@8.0.0-rc22):
+    resolution: {integrity: sha512-K4b8QhQGXYW5wr4l+U6XryhafsFV5c/IyohDnZN3MGoYIB9xY7qpjUWAcs5bTDjAD+qCZPOuXre0D3IVa28mqw==}
+    peerDependencies:
+      embla-carousel: 8.0.0-rc22
+    dependencies:
+      embla-carousel: 8.0.0-rc22
+    dev: false
+
+  /embla-carousel@8.0.0-rc22:
+    resolution: {integrity: sha512-MeXnPT1LShfgAu8qXj3CskayV0R6OkHx7w3cPTx+Q5ZWKyShKpIuu7qVQJ5BoFegalE4n6yxqoQaRuGFbK9pYw==}
+    dev: false
+
   /emoji-regex@8.0.0:
     resolution: {integrity: sha512-MSjYzcWNOA0ewAHpz0MxpYFvwg6yjy1NG3xteoqz644VCo/RPgnr1/GGt+ic3iJTzQ8Eu3TdM14SawnVUmGE6A==}
 
@@ -2470,8 +2506,8 @@ packages:
       yallist: 4.0.0
     dev: true
 
-  /lucide-react@0.309.0(react@18.2.0):
-    resolution: {integrity: sha512-zNVPczuwFrCfksZH3zbd1UDE6/WYhYAdbe2k7CImVyPAkXLgIwbs6eXQ4loigqDnUFjyFYCI5jZ1y10Kqal0dg==}
+  /lucide-react@0.321.0(react@18.2.0):
+    resolution: {integrity: sha512-Fi9VahIna6642U+2nAGSjnXwUBV3WyfFFPQq4yi3w30jtqxDLfSyiYCtCYCYQZ2KWNZc1MDI+rcsa0t+ChdYpw==}
     peerDependencies:
       react: ^16.5.1 || ^17.0.0 || ^18.0.0
     dependencies:
