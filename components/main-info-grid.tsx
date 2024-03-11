@@ -36,12 +36,11 @@ const CCMetcon = localFont({
   variable: '--font-CCMetcon'
 })
 
-
 const MainInfoGrid: FunctionComponent = () => {
   const plugin = useRef(Autoplay({ delay: 2000, stopOnInteraction: true }));
 
   return (
-    <div className="max-w-md mx-auto p-2 bg-eggshell-pattern bg-repeat bg-[#e2dfd6] bg-opacity-100">
+    <div className="max-w-md mx-auto p-2 bg-eggshell-pattern bg-repeat bg-[#d4b661] bg-opacity-20">
       <div className="parent grid grid-cols-5 grid-rows-[1fr,2fr,2fr,3fr] gap-0">
         <div className="col-span-3 flex h-full items-center justify-between gap-2 border-b border-l [border-image:linear-gradient(to_top,#7e5a58,rgba(0,0,0,0))_.5] p-2 text-right text-4xl">
           <Plane size={100} />
@@ -111,9 +110,9 @@ const MainInfoGrid: FunctionComponent = () => {
         </div>
 
         <div className="w-full">
-          <ImgComparisonSlider className="w-screen slider-example-split-line pointer-events-none" width={'100%'} value={77}  direction="vertical">
-            <img slot="first" src="color.svg" />
-            <img slot="second" src="gray.svg" />
+          <ImgComparisonSlider className="w-screen slider-example-split-line" width={'100%'} value={10}  direction="vertical">
+            <img slot="first" src="viagem.png" />
+            <img slot="second" className="grayscale" src="viagem.png" />
           </ImgComparisonSlider>
         </div>
       </div>
