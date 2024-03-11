@@ -15,7 +15,7 @@ export default function Home() {
       {/* <div className="p-4">
         <Progress />
       </div> */}
-      <Button className="w-32 fixed bottom-2 right-2"><Link href={'/gifts'}>Doar</Link></Button>
+      <Button className="w-32 fixed bottom-2 right-2"><Link href={'/gifts'}>Contribuir</Link></Button>
     </div>
   );
 }

@@ -43,8 +43,8 @@ const MainInfoGrid: FunctionComponent = () => {
     <div className="max-w-md mx-auto p-2 bg-eggshell-pattern bg-repeat bg-[#d4b661] bg-opacity-20">
       <div className="parent grid grid-cols-5 grid-rows-[1fr,2fr,2fr,3fr] gap-0">
         <div className="col-span-3 flex relative h-full items-center justify-between gap-2 border-b border-l [border-image:linear-gradient(to_top,#7e5a58,rgba(0,0,0,0))_.5] p-2 text-right text-4xl">
-          <img className="w-28 -bottom-8 absolute transform" src="invite8.png" alt="tomato" />
-          <div className={`${CCMetcon.variable} font-sans text-regular`}>Marcela & Pedro</div>
+          <img className="w-28 -rotate-12 -bottom-8 -left-1 absolute transform" src="invite8.png" alt="tomato" />
+          <div className={`${CCMetcon.variable} font-sans text-3xl tracking-[0.2em]`}>Marcela & Pedro</div>
         </div>
         <div className="col-span-2 col-start-4 row-span-2 row-start-1 flex flex-col items-center justify-center gap-10 border-l border-r [border-image:linear-gradient(to_top,#7e5a58,rgba(0,0,0,0))_90]">
           <Apple size={100} />
