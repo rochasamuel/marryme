@@ -1,5 +1,6 @@
 import Header from "@/components/header/header";
 import MainInfo from "@/components/main-info";
+import MainInfoGrid from "@/components/main-info-grid";
 import { Button } from "@/components/ui/button";
 import dynamic from "next/dynamic";
 import Link from "next/link";
@@ -9,8 +10,8 @@ const Progress = dynamic(() => import("../components/progress"), {
 
 export default function Home() {
   return (
-    <div className="w-full">
-      <MainInfo />
+    <div className="overflow-x-hidden">
+      <MainInfoGrid />
       {/* <div className="p-4">
         <Progress />
       </div> */}

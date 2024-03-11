@@ -38,6 +38,7 @@ const MainInfo: FunctionComponent = () => {
 
         <Carousel
           plugins={[plugin.current]}
+          opts={{ loop: true }}
           onMouseEnter={plugin.current.stop}
           onMouseLeave={plugin.current.play}
           className="w-full"

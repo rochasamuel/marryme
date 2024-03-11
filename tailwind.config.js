@@ -17,6 +17,15 @@ module.exports = {
       },
     },
     extend: {
+      fontFamily: {
+        sans: ['var(--font-CCMetcon)']
+      },
+      backgroundImage: {
+        'eggshell-pattern': "url('/egg-shell.png')",
+      },
+      borderImage: {
+        "gradient-border": "linear-gradient(to bottom, #181818, #eee, #181818) 1 100%",
+      },
       colors: {
         border: "hsl(var(--border))",
         input: "hsl(var(--input))",

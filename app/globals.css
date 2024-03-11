@@ -66,6 +66,13 @@
   }
 }
  
+
+.slider-example-split-line {
+  --divider-width: 0px;
+  --divider-color: #ffa658;
+  --default-handle-opacity: 0;
+}
+
 @layer base {
   * {
     @apply border-border;
