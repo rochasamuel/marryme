@@ -1,13 +1,14 @@
 "use client";
 
 import Autoplay from "embla-carousel-autoplay";
-import { ImgComparisonSlider } from '@img-comparison-slider/react';
+import { ImgComparisonSlider } from "@img-comparison-slider/react";
 import {
   Apple,
   Calendar,
   CalendarDays,
   Clipboard,
   Lamp,
+  MapPin,
   MapPinned,
   Plane,
   TicketCheck,
@@ -29,22 +30,30 @@ import localFont from "next/font/local";
 const CCMetcon = localFont({
   src: [
     {
-      path: '../public/fonts/CCMetcon.ttf',
-      weight: '400'
+      path: "../public/fonts/CCMetcon.ttf",
+      weight: "400",
     },
   ],
-  variable: '--font-CCMetcon'
-})
+  variable: "--font-CCMetcon",
+});
 
 const MainInfoGrid: FunctionComponent = () => {
   const plugin = useRef(Autoplay({ delay: 2000, stopOnInteraction: true }));
 
   return (
-    <div className="max-w-md mx-auto p-2 bg-eggshell-pattern bg-repeat bg-[#d4b661] bg-opacity-20">
+    <div className="mx-auto max-w-md bg-[#d4b661] bg-opacity-20 bg-eggshell-pattern bg-repeat p-2">
       <div className="parent grid grid-cols-5 grid-rows-[1fr,2fr,2fr,3fr] gap-0">
-        <div className="col-span-3 flex relative h-full items-center justify-between gap-2 border-b border-l [border-image:linear-gradient(to_top,#7e5a58,rgba(0,0,0,0))_.5] p-2 text-right text-4xl">
-          <img className="w-28 -rotate-12 -bottom-8 -left-1 absolute transform" src="invite8.png" alt="tomato" />
-          <div className={`${CCMetcon.variable} font-sans text-3xl tracking-[0.2em]`}>Marcela & Pedro</div>
+        <div className="relative col-span-3 flex h-full items-center justify-between gap-2 border-b border-l p-2 text-right text-4xl [border-image:linear-gradient(to_top,#7e5a58,rgba(0,0,0,0))_.5]">
+          <img
+            className="absolute -bottom-8 -left-1 w-28 -rotate-12 transform"
+            src="invite8.png"
+            alt="tomato"
+          />
+          <div
+            className={`${CCMetcon.variable} font-sans text-3xl tracking-[0.2em]`}
+          >
+            Marcela & Pedro
+          </div>
         </div>
         <div className="col-span-2 col-start-4 row-span-2 row-start-1 flex flex-col items-center justify-center gap-10 border-l border-r [border-image:linear-gradient(to_top,#7e5a58,rgba(0,0,0,0))_90]">
           <Apple size={100} />
@@ -55,7 +64,7 @@ const MainInfoGrid: FunctionComponent = () => {
         </div>
         <div className="col-span-2 col-start-1 row-span-1 row-start-2 flex flex-col gap-2 border-l border-[#7e5a58] p-2">
           <div className="flex gap-2">
-            <Lamp />
+            <MapPin />
             Vila Alguma Coisa
           </div>
           <div className="flex gap-2">
@@ -64,7 +73,10 @@ const MainInfoGrid: FunctionComponent = () => {
           </div>
           <div className="mt-10 flex gap-2">dsadasdlkajslkdjsalkd</div>
         </div>
-        <div className="col-span-5 pt-2 col-start-1 row-span-1 row-start-3 h-min border-t [border-image:linear-gradient(to_right,#7e5a58,rgba(0,0,0,0))_20]">
+        <div className="col-span-5 col-start-1 row-span-1 row-start-3 h-min border-t pt-2 [border-image:linear-gradient(to_right,#7e5a58,rgba(0,0,0,0))_20]">
+          <div className={`${CCMetcon.variable} font-sans w-full text-center text-lg`}>
+            Na dúvida do que vestir? A gente te ajuda!
+          </div>
           <Carousel
             plugins={[plugin.current]}
             opts={{ loop: true }}
@@ -92,7 +104,7 @@ const MainInfoGrid: FunctionComponent = () => {
             </CarouselContent>
           </Carousel>
         </div>
-        <div className="col-span-5 col-start-1 pt-2 row-span-1 row-start-4 mt-2 border-t [border-image:linear-gradient(to_right,rgba(0,0,0,0),#7e5a58,rgba(0,0,0,0))_50]">
+        <div className="col-span-5 col-start-1 row-span-1 row-start-4 mt-2 border-t pt-2 [border-image:linear-gradient(to_right,rgba(0,0,0,0),#7e5a58,rgba(0,0,0,0))_50]">
           <Card className="w-full">
             <CardContent className="flex items-center justify-center p-1">
               <iframe
@@ -110,7 +122,12 @@ const MainInfoGrid: FunctionComponent = () => {
         </div>
 
         <div className="w-full">
-          <ImgComparisonSlider className="w-screen slider-example-split-line" width={'100%'} value={10}  direction="vertical">
+          <ImgComparisonSlider
+            className="slider-example-split-line w-screen"
+            width={"100%"}
+            value={10}
+            direction="vertical"
+          >
             <img slot="first" src="viagem.png" />
             <img slot="second" className="grayscale" src="viagem.png" />
           </ImgComparisonSlider>
