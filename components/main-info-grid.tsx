@@ -45,7 +45,7 @@ const MainInfoGrid: FunctionComponent = () => {
 
   return (
     <div className="mx-auto max-w-md bg-[#d4b661] bg-opacity-20 bg-eggshell-pattern bg-repeat p-2">
-      <div className="parent grid grid-cols-5 grid-rows-[6rem,8rem,2fr,3fr] gap-0">
+      <div className="parent grid grid-cols-5 grid-rows-[6rem,8rem,2fr,2fr] gap-0">
         <div className="relative col-span-3 flex h-full items-center justify-between gap-2 border-b border-l p-2 text-right text-4xl [border-image:linear-gradient(to_top,#7e5a58,rgba(0,0,0,0))_.5]">
           <img
             className="absolute -bottom-8 -left-1 w-28 -rotate-12 transform"
@@ -117,7 +117,7 @@ const MainInfoGrid: FunctionComponent = () => {
             </CarouselContent>
           </Carousel>
         </div>
-        <div className="col-span-5 col-start-1 row-span-1 row-start-4 mt-2 border-t pt-2 [border-image:linear-gradient(to_right,rgba(0,0,0,0),#7e5a58,rgba(0,0,0,0))_50]">
+        <div className="col-span-5 col-start-1 row-span-1 row-start-4 h-full mt-2 border-t pt-2 [border-image:linear-gradient(to_right,rgba(0,0,0,0),#7e5a58,rgba(0,0,0,0))_50]">
           <Card className="w-full">
             <CardContent className="flex items-center justify-center p-0">
               <iframe
@@ -136,8 +136,8 @@ const MainInfoGrid: FunctionComponent = () => {
 
         <div className="w-full">
           <ImgComparisonSlider
-            className="slider-example-split-line w-screen"
-            width={"100%"}
+            className="slider-example-split-line w-[446px]"
+            // width={"100%"}
             value={10}
             direction="vertical"
           >
