@@ -60,7 +60,7 @@ const MainInfoGrid: FunctionComponent = () => {
         </div>
         <div className="col-span-2 col-start-4 row-span-2 row-start-1 flex flex-col items-center justify-end gap-2 border-l border-r [border-image:linear-gradient(to_top,#7e5a58,rgba(0,0,0,0))_90]">
           {/* <img src="/invite4.png" alt="limao" className="rotate-90" /> */}
-          <div className="text-xs">Confirme sua presença até o dia 15.05, clicando aqui</div>
+          <div className="text-xs">Confirme sua presença até o dia 15.05, clicando aqui </div>
           <Button className={`${CCMetcon.variable} font-sans w-5/6 bg-transparent border-[#7e5a58] mb-2`} variant={"outline"}>Eu vou!</Button>
         </div>
         <div className="col-span-1 col-start-3 row-span-1 row-start-2 flex items-center justify-center [border-image:linear-gradient(to_bottom,#7e5a58,rgba(0,0,0,0))_15]">
