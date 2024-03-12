@@ -6,6 +6,7 @@ import {
   Apple,
   Calendar,
   CalendarDays,
+  CalendarPlus,
   Clipboard,
   Lamp,
   MapPin,
@@ -37,12 +38,14 @@ const CCMetcon = localFont({
   variable: "--font-CCMetcon",
 });
 
+const links = ['/dc1.jpg','/dc2.jpg','/dc3.jpg','/dc4.jpg']
+
 const MainInfoGrid: FunctionComponent = () => {
   const plugin = useRef(Autoplay({ delay: 2000, stopOnInteraction: true }));
 
   return (
     <div className="mx-auto max-w-md bg-[#d4b661] bg-opacity-20 bg-eggshell-pattern bg-repeat p-2">
-      <div className="parent grid grid-cols-5 grid-rows-[1fr,2fr,2fr,3fr] gap-0">
+      <div className="parent grid grid-cols-5 grid-rows-[6rem,8rem,2fr,3fr] gap-0">
         <div className="relative col-span-3 flex h-full items-center justify-between gap-2 border-b border-l p-2 text-right text-4xl [border-image:linear-gradient(to_top,#7e5a58,rgba(0,0,0,0))_.5]">
           <img
             className="absolute -bottom-8 -left-1 w-28 -rotate-12 transform"
@@ -56,25 +59,37 @@ const MainInfoGrid: FunctionComponent = () => {
           </div>
         </div>
         <div className="col-span-2 col-start-4 row-span-2 row-start-1 flex flex-col items-center justify-center gap-10 border-l border-r [border-image:linear-gradient(to_top,#7e5a58,rgba(0,0,0,0))_90]">
-          <Apple size={100} />
-          <Button className="w-5/6">Confirme presença</Button>
+          <img src="/invite4.png" alt="limao" className="rotate-90" />
+          <Button className={`${CCMetcon.variable} font-sans w-5/6 bg-transparent border-[#7e5a58]`} variant={"outline"}>Confirme presença</Button>
         </div>
-        <div className="col-span-1 col-start-3 row-span-1 row-start-2 flex items-center justify-center border-l [border-image:linear-gradient(to_bottom,#7e5a58,rgba(0,0,0,0))_15]">
-          <Clipboard size={100} />
+        <div className="col-span-1 col-start-3 row-span-1 row-start-2 flex items-center justify-center [border-image:linear-gradient(to_bottom,#7e5a58,rgba(0,0,0,0))_15]">
         </div>
-        <div className="col-span-2 col-start-1 row-span-1 row-start-2 flex flex-col gap-2 border-l border-[#7e5a58] p-2">
-          <div className="flex gap-2">
-            <MapPin />
-            Vila Alguma Coisa
+        <div className="col-span-3 col-start-1 row-span-1 row-start-2 flex flex-col justify-between gap-2 border-l border-[#7e5a58] p-2">
+          <div className="flex flex-col gap-2">
+          <div className={`${CCMetcon.variable} font-sans text-sm flex gap-2 items-center`}>
+            <MapPin size={18} />
+            Villa Liporoni - Brasília
           </div>
-          <div className="flex gap-2">
-            <Calendar />
-            Dia xx/00/xxxx
+          <div className={`${CCMetcon.variable} font-sans text-sm flex gap-2 items-center`}>
+            <CalendarDays size={18} />
+            15.06.2024 - 10:30
           </div>
-          <div className="mt-10 flex gap-2">dsadasdlkajslkdjsalkd</div>
+          <div className={`font-sans text-sm flex gap-2 items-center`}>
+            <CalendarPlus size={18} />
+            <a href="/" className="underline italic font-medium"> Adicione a sua agenda</a>
+          </div>
+
+          </div>
+          <div className="flex gap-2 w-full justify-center">
+            <div className="rounded-full bg-[#C5B18D] size-4" />
+            <div className="rounded-full bg-[#8B5B3C] size-4" />
+            <div className="rounded-full bg-[#8D8C44] size-4" />
+            <div className="rounded-full bg-[#4C5B45] size-4" />
+            <div className="rounded-full bg-[#8B5B3C] size-4" />
+          </div>
         </div>
         <div className="col-span-5 col-start-1 row-span-1 row-start-3 h-min border-t pt-2 [border-image:linear-gradient(to_right,#7e5a58,rgba(0,0,0,0))_20]">
-          <div className={`${CCMetcon.variable} font-sans w-full text-center text-lg`}>
+          <div className={`${CCMetcon.variable} font-sans w-full text-center text-lg mb-1`}>
             Na dúvida do que vestir? A gente te ajuda!
           </div>
           <Carousel
@@ -85,17 +100,15 @@ const MainInfoGrid: FunctionComponent = () => {
             className="w-full"
           >
             <CarouselContent className="-ml-2 md:-ml-4">
-              {Array.from({ length: 5 }).map((_, index) => (
+              {links.map((link, index) => (
                 <CarouselItem
                   key={index + 1}
                   className="w-1/2 basis-[55%] pl-1"
                 >
-                  <div className="p-1">
+                  <div>
                     <Card>
-                      <CardContent className="flex aspect-square items-center justify-center p-6">
-                        <span className="text-2xl font-semibold">
-                          {index + 1}
-                        </span>
+                      <CardContent className="flex aspect-square items-center justify-center p-0">
+                        <img src={link} className="h-full w-full object-cover rounded-sm border-[#7e5a58] border" alt={"sdljsadk"} ></img>
                       </CardContent>
                     </Card>
                   </div>
@@ -106,7 +119,7 @@ const MainInfoGrid: FunctionComponent = () => {
         </div>
         <div className="col-span-5 col-start-1 row-span-1 row-start-4 mt-2 border-t pt-2 [border-image:linear-gradient(to_right,rgba(0,0,0,0),#7e5a58,rgba(0,0,0,0))_50]">
           <Card className="w-full">
-            <CardContent className="flex items-center justify-center p-1">
+            <CardContent className="flex items-center justify-center p-0">
               <iframe
                 className="rounded-md"
                 width="560"
