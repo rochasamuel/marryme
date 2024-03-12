@@ -47,19 +47,19 @@ const MainInfoGrid: FunctionComponent = () => {
     <div className="mx-auto max-w-md bg-[#d4b661] bg-opacity-20 bg-eggshell-pattern bg-repeat p-2">
       <div className="parent grid grid-cols-5 grid-rows-[6rem,8rem,2fr,2fr] gap-0">
         <div className="relative col-span-3 flex h-full items-center justify-between gap-2 border-b border-l p-2 text-right text-4xl [border-image:linear-gradient(to_top,#7e5a58,rgba(0,0,0,0))_.5]">
-          <img
+          {/* <img
             className="absolute -bottom-8 -left-1 w-28 -rotate-12 transform"
             src="invite8.png"
             alt="tomato"
-          />
+          /> */}
           <div
-            className={`${CCMetcon.variable} font-sans text-3xl tracking-[0.2em]`}
+            className={`${CCMetcon.variable} font-sans text-3xl tracking-[0.2em] text-shadow-[1px,1px,2px,black]`}
           >
             Marcela & Pedro
           </div>
         </div>
         <div className="col-span-2 col-start-4 row-span-2 row-start-1 flex flex-col items-center justify-center gap-10 border-l border-r [border-image:linear-gradient(to_top,#7e5a58,rgba(0,0,0,0))_90]">
-          <img src="/invite4.png" alt="limao" className="rotate-90" />
+          {/* <img src="/invite4.png" alt="limao" className="rotate-90" /> */}
           <Button className={`${CCMetcon.variable} font-sans w-5/6 bg-transparent border-[#7e5a58]`} variant={"outline"}>Confirme presença</Button>
         </div>
         <div className="col-span-1 col-start-3 row-span-1 row-start-2 flex items-center justify-center [border-image:linear-gradient(to_bottom,#7e5a58,rgba(0,0,0,0))_15]">
