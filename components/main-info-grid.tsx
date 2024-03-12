@@ -55,7 +55,7 @@ const MainInfoGrid: FunctionComponent = () => {
           <div
             className={`${CCMetcon.variable} font-sans text-3xl tracking-[0.2em] text-shadow-[1px,1px,2px,black]`}
           >
-            Marcela & Pedro 
+            Marcela & Pedro  
           </div>
         </div>
         <div className="col-span-2 col-start-4 row-span-2 row-start-1 flex flex-col items-center justify-end gap-2 border-l border-r [border-image:linear-gradient(to_top,#7e5a58,rgba(0,0,0,0))_90]">
